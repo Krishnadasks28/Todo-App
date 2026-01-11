@@ -43,17 +43,17 @@ function Dashboard() {
 
   const [isEditOpen, setEditOpen] = useState(false);
   return (
-    <div className="flex justify-center h-screen w-full">
-      <div className="w-1/2 md:w-2/5 flex flex-col justify-start relative top-36">
+    <div className="flex justify-center h-screen w-full ">
+      <div className="w-full p-8 sm:p-0 md:w-4/5 lg:w-2/5 flex flex-col justify-start relative top-8 sm:top-36 ">
         {/* title area */}
         <div>
-          <h1 className="text-6xl font-bold">My Todos</h1>
-          <h6 className=" text-slate-500 mt-1 text-xl">
+          <h1 className="text-3xl sm:text-6xl font-bold">My Todos</h1>
+          <h6 className=" text-slate-500 mt-1 text-sm sm:text-xl">
             Keep track of your daily tasks.
           </h6>
         </div>
         {/* input area */}
-        <div className=" bg-white w-full p-7 rounded-2xl mt-8 shadow-lg">
+        <div className=" bg-white w-full p-2 sm:p-7 rounded-md sm:rounded-2xl mt-8 shadow-lg">
           <form
             onSubmit={(e) => {
               e.preventDefault();
@@ -64,13 +64,13 @@ function Dashboard() {
               <input
                 type="text"
                 placeholder="What needs to be done?"
-                className="w-full bg-slate-100 border-slate-100 p-3 rounded-xl transition-shadow duration-300 focus:outline-none focus:ring-4 focus:ring-slate-300"
+                className="w-full bg-slate-100 border-slate-100 p-1 sm:p-3 rounded-md sm:rounded-xl transition-shadow duration-300 focus:outline-none focus:ring-4 focus:ring-slate-300"
                 onChange={(e) => setNewTodo(e.target.value)}
                 value={newTodo}
               />
               <button
                 onClick={() => addNewTodo(newTodo)}
-                className="shrink-0 cursor-pointer font-semibold hover:font-extrabold focus:outline-none  transition-shadow duration-300 focus:ring-4 focus:ring-blue-300 bg-blue-500 hover:bg-blue-700 text-white px-4 rounded-lg"
+                className="shrink-0 cursor-pointer font-semibold hover:font-extrabold focus:outline-none  transition-shadow duration-300 focus:ring-4 focus:ring-blue-300 bg-blue-500 hover:bg-blue-700 text-white px-1 py-1 sm:px-4 rounded-lg"
               >
                 <Plus className="h-5 w-5 sm:mr-2 inline" />
                 <span className="hidden ml-2 sm:inline">Add</span>

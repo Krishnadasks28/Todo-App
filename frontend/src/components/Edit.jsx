@@ -10,7 +10,7 @@ function Edit({ setEditOpen, updateTodo, todo }) {
   };
   return (
     <div className="fixed inset-0 z-50 bg-black/40 items-center flex justify-center">
-      <div className="bg-white p-8 rounded-xl w-2/7">
+      <div className="bg-white p-8 rounded-xl w-full md:w-5/7 lg:w-2/7">
         <div className="flex w-full justify-between">
           <div>
             <h1 className="font-semibold text-xl">Edit Todo</h1>
